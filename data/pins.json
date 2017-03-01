@@ -1,0 +1,29 @@
+{ 
+    "users": [
+        {
+            "0": {
+                "uid": "0",
+                "name": ""
+            }
+        }
+    ],
+    "pins": [
+        {
+            "": {
+                "uid": "",
+                "boardid": "",
+                "url": "data/pictures/whale-cats.jpg", 
+                "title": "Cute whale-cats! I want one!"
+
+            }
+        }
+    ],
+    "boards": [
+        {
+            "": {
+                "uid": "",
+                "title": "Star Wars shiz"
+            }
+        }
+    ]
+}
