@@ -37,7 +37,7 @@ app.config(function($routeProvider) {
 		templateUrl: "partials/profile.html",
 		controller: "UserCtrl"
 	});
-	
+
 });
 
 

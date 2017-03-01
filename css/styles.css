@@ -5,7 +5,8 @@
   background-color: white;
 }
 
-.navbar-form {
+/*.navbar-form {
+
 	width: 73% !important;
 }
 
@@ -15,6 +16,7 @@
 
 .form-control {
 	width: 100% !important;
+
   background-color: #e6e6e6;
 }
 
@@ -77,4 +79,3 @@ h2 {
   float: right;
   margin-right: 1%;
 }
-
