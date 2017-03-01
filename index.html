@@ -8,26 +8,17 @@
 </head>
 <body ng-app="Pinterest">
 
-			<section id="pinBoot">
+  	<div ng-include="'partials/navbar.html'"></div>
 
 				<div class="container">
 				  <div class="row">
 
-				<article class="pinCards" style="max-width: 19.654%; max-height: 350px;">
-					<button type="button" class="btn btn-sm pinButton"><a ng-href="#!/items/{{pins.uid}}/edit">Pin</a></button>
-							<br>
-					<img class="card-img-top" src="lib/asa.jpg" alt="Card image cap" style="max-width: 100%">
-					<div class="card-block">
-					 	<h4 class="card-title">{{pins.title}}</h4>
-					 	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button class="btn btn-info"><a ng-href="#!/items/{{pins.uid}}/edit">Go to Pin</a></button>
-					</div>
-			</article>
+
+
+
 
 			</div>
 			</div>
-		</section>
-
 
 
 	<script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
@@ -41,7 +32,7 @@
 	<script type="text/javascript" src="app/app.js"></script>
 	<script type="text/javascript" src="app/values/FBCreds.js"></script>
 
-<
+
 	<!-- Factories -->
 	<script type="text/javascript" src="app/factories/AuthFactory.js"></script>
 
