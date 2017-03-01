@@ -7,15 +7,15 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body ng-app="Pinterest">
-	<div class="form-group">
-		<input type="text" class="form-control inputBoard" placeHolder="Name your board" ng-modal="newBoard.boardName">
-		<button class="btn btn-info create"><a ng-href="#!/items/{{pins.uid}}/edit">Create</a></button>
-		<button class="btn btn-info cancel"><a ng-href="#!/items/{{pins.uid}}/edit">Cancel</a></button>
-	</div>
+
+
 
 	<!-- <div class="container">
 	  <div class="row">
+	<div ng-include="'partials/navbar.html'"></div>
 
+
+	<div ng-view></div>
 
 	</div>
 </div> -->
@@ -36,6 +36,7 @@
 
 	<!-- Controllers -->
 
+	<script type="text/javascript" src="app/controllers/initialCtrl.js"></script>
 
 </body>
 </html>
