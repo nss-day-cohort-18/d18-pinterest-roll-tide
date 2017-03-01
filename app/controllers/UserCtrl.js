@@ -80,4 +80,3 @@ app.controller("UserCtrl", function($scope, $window, $location, AuthFactory){
 	};
 
 });
-
