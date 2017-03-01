@@ -1,3 +1,4 @@
+
 /* Navbar */
 
 .navbar-form {
@@ -11,3 +12,60 @@
 .form-control {
 	width: 100% !important;
 }
+
+
+
+
+
+
+/***********************
+- Pinterest Cards
+***********************/
+
+#pinBoot {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.pinCards {
+    position: absolute;
+    background: white;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+h2 {
+  width: 100%;
+}
+.pinButton {
+  float: right;
+  border: 2px solid black;
+  background-color: #C70039;
+}
+.btn-primary {
+  color: white;
+}
+
+
+/*********************
+- Input Partial
+**********************/
+
+.inputBoard {
+  border: 2px solid black;
+  margin: 10% 10% 0 10%;
+}
+.create {
+  float: right;
+  margin-right: 1%;
+
+}
+.cancel {
+  float: right;
+  margin-right: 1%;
+}
+
