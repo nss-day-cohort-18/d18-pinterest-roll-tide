@@ -5,9 +5,11 @@
 	<title>Pinterest Clone</title>
 	<link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
-<body>
+<body ng-app="Pinterest">
 
+	<div ng-include="'partials/navbar.html'"></div>
 
+	<div ng-view></div>
 
 
 	<script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
@@ -24,5 +26,6 @@
 
 
 	<!-- Controllers -->
+	<script type="text/javascript" src="app/controllers/initialCtrl.js"></script>
 </body>
 </html>
