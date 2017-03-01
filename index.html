@@ -4,10 +4,21 @@
 	<meta charset="utf-8">
 	<title>Pinterest Clone</title>
 	<link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body>
+<body ng-app="Pinterest">
+	<div class="form-group">
+		<input type="text" class="form-control inputBoard" placeHolder="Name your board" ng-modal="newBoard.boardName">
+		<button class="btn btn-info create"><a ng-href="#!/items/{{pins.uid}}/edit">Create</a></button>
+		<button class="btn btn-info cancel"><a ng-href="#!/items/{{pins.uid}}/edit">Cancel</a></button>
+	</div>
+
+	<!-- <div class="container">
+	  <div class="row">
 
 
+	</div>
+</div> -->
 
 
 	<script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
@@ -20,9 +31,11 @@
 	<!-- Main App script -->
 	<script type="text/javascript" src="app/app.js"></script>
 
-	<!-- Factories --> 
+	<!-- Factories -->
 
 
 	<!-- Controllers -->
+
+
 </body>
 </html>
