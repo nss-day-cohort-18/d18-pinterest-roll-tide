@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Pinterest Clone</title>
 	<link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body ng-app="Pinterest">
 
@@ -21,11 +22,13 @@
 
 	<!-- Main App script -->
 	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/values/FBCreds.js"></script>
 
 	<!-- Factories --> 
-
+	<script type="text/javascript" src="app/factories/AuthFactory.js"></script>
 
 	<!-- Controllers -->
-	<script type="text/javascript" src="app/controllers/initialCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/UserCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
 </body>
 </html>
