@@ -7,20 +7,20 @@ app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
     var getNewPin = () => {
         var pins = [];
 
-        return $q((resolve, reject) => ){    //put in url from firebase
+        return $q((resolve, reject) => {    //put in url from firebase
             $http.get(`{FBCreds.databaseURL}*url will go here*`)
             .then((pinObj) => {
                 var allPins = pinObj.data;
                 Object.keys(allPins).forEach((key) =>{
                     allPins[key].id = key;
-                    item.push(allPins[key]);
+                    pins.push(allPins[key]);
                 });
                 resolve(pins);
             })
             .catch((error)=>{
                 reject(error);
             });
-        };
+        });
     };
 
     var saveNewPin = (newPin) => {
