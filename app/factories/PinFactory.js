@@ -8,7 +8,7 @@ app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
         var pins = [];
 
         return $q((resolve, reject) => {    //put in url from firebase
-            $http.get(`{FBCreds.databaseURL}*url will go here*`)
+            $http.get(`{FBCreds.databaseURL}/pins.json`)
             .then((pinObj) => {
                 var allPins = pinObj.data;
                 Object.keys(allPins).forEach((key) =>{
@@ -26,7 +26,7 @@ app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
     var saveNewPin = (newPin) => {
         return $q((reject, resolve) => {
             $http.post(`${FBCreds.databaseURL}/pins.json`,
-                JSON.stringify(newPin))
+                angular.toJson(newPin))
             .then((FBObject)=> {
                 resolve(FBObject);
             })
@@ -39,7 +39,7 @@ app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
     var saveNewBoard = (newBoard) => {
         return $q((reject, resolve) => {
             $http.post(`${FBCreds.databaseURL}/boards.json`,
-                JSON.stringify(newBoard))
+                angular.toJson(newBoard))
             .then((FBObject)=> {
                 console.log(FBCreds.databaseURL);
                 resolve(FBObject);
@@ -51,17 +51,17 @@ app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
     };
 
     var getBoards = (userID) => {
-        var pins = [];
-
+        var boards = [];
+        console.log("PF userID",  userID);
         return $q((resolve, reject) => {    //put in url from firebase
-            $http.get(`{FBCreds.databaseURL}`)
+            $http.get(`${FBCreds.databaseURL}/boards.json?orderBy="uid"&equalTo="${userID}"`)
             .then((pinObj) => {
-                var allPins = pinObj.data;
-                Object.keys(allPins).forEach((key) =>{
-                    allPins[key].id = key;
-                    pins.push(allPins[key]);
+                var allBoards = pinObj.data;
+                Object.keys(allBoards).forEach((key) =>{
+                    allBoards[key].id = key;
+                    boards.push(allBoards[key]);
                 });
-                resolve(pins);
+                resolve(boards);
             })
             .catch((error)=>{
                 reject(error);
@@ -69,5 +69,5 @@ app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
         });
     };
 
-    return {getNewPin, saveNewPin, saveNewBoard};
+    return {getNewPin, saveNewPin, saveNewBoard, getBoards};
 });
