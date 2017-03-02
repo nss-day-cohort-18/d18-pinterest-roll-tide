@@ -36,8 +36,19 @@ app.config(function($routeProvider) {
 	when('/profile', {
 		templateUrl: "partials/profile.html",
 		controller: "UserCtrl"
-	});
-
+	}).
+    when('/boards', {
+        templateUrl: "partials/boards.html",
+        controller: "UserCtrl"
+    }).
+    // when('/boards/{{board.title}}', {
+    //     templateUrl: "partials/",
+    //     controller: ""
+    // }).
+    when('/create-board', {
+        templateUrl: "partials/createboard.html",
+        controller: "NewBoardCtrl"
+    });
 });
 
 

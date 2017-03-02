@@ -19,6 +19,9 @@ app.controller("UserCtrl", function($scope, $window, $location, AuthFactory){
 			});
 	};
 
+	// Creat user function 
+
+
 /////////////////////////////////////////////////////////////////////
 	//when first loaded, make sure no one is logged in
 	// if(AuthFactory.isAuthenticated()){

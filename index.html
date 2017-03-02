@@ -10,39 +10,9 @@
 
   	<div ng-include="'partials/navbar.html'"></div>
 
-		<div id="columns">
-		  <figure>
-		    <a href="#" class="action-button shadow animate red">Pin</a>
-		  <img src="data/pictures/10Bama.jpg">
-			<figcaption>Cinderella wearing European fashion of the mid-1860’s</figcaption>
-			</figure>
 
-		   <figure>
-		     <a href="#" class="action-button shadow animate red">Pin</a>
-			 <img src="data/pictures/D-henry.jpg">
-			<figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
-			</figure>
+  		<div ng-view></div>
 
-		   <figure>
-		     <a href="#" class="action-button shadow animate red">Pin</a>
-			 <img src="data/pictures/luke-warm.jpg">
-			<figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-			</figure>
-
-			<figure>
-		    <a href="#" class="action-button shadow animate red">Pin</a>
-			<img src="data/pictures/star_wars_meme_yoda.jpg">
-			<figcaption>Snow White, based on 16th century German fashion</figcaption>
-			</figure>
-
-		   <figure>
-		  <a href="#" class="action-button shadow animate red">Pin</a>
-			<img src="data/pictures/whale-cat.jpg">
-			<figcaption>Ariel wearing an evening gown of the 1890’s</figcaption>
-			</figure>
-
-
-		</div>
 
 
 
@@ -61,13 +31,16 @@
 	<script type="text/javascript" src="app/app.js"></script>
 	<script type="text/javascript" src="app/values/FBCreds.js"></script>
 
-
 	<!-- Factories -->
 	<script type="text/javascript" src="app/factories/AuthFactory.js"></script>
+	<script type="text/javascript" src="app/factories/PinFactory.js"></script>
 
 	<!-- Controllers -->
 	<script type="text/javascript" src="app/controllers/UserCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/NewBoardCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/NewPinCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/SavePinCtrl.js"></script>
 
 </body>
 </html>
