@@ -5,20 +5,22 @@ app.controller("NewBoardCtrl", function($scope, PinFactory, $location, AuthFacto
 	let user = AuthFactory.getUser();
 
 	$scope.btnText = "Create";
-	$scope.btnText = "Cancel";
+	$scope.btnText2 = "Cancel";
 	$scope.newText = {};
 
-	$scope.newTask = {
+	$scope.newBoard = {
 		uid: "",
-		title: ""
+		title: "",
+		description: ""
 	};
 
 	$scope.addNewBoard = function(){
-		PinFactory.saveNewBoard($scope.newTask)	//ask Dean about his saveNewPin ***and what is newTask
+		PinFactory.saveNewBoard($scope.newBoard)	//ask Dean about his saveNewPin ***and what is newTask
 		.then(function(response){
-			$location.url("");
+			$location.url("/home");
 		});
 
 		$scope.newTask = {};
 	};
+
 });

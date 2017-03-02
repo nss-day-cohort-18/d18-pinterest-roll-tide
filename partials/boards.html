@@ -1,22 +1,22 @@
-<section id="pinBoot">
 
-	<div class="container">
-	  <div class="row">
 
-	<article class="pinCards" style="max-width: 19.654%; max-height: 350px;">
-		<button type="button" class="btn btn-sm pinButton"><a ng-href="#!/items/{{pins.uid}}/edit">Pin</a></button>
-				<br>
-		<img class="card-img-top" src="lib/asa.jpg" alt="Card image cap" style="max-width: 100%">
-		<div class="card-block">
-		 	<h4 class="card-title">{{pins.title}}</h4>
-		 	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<button class="btn btn-info"><a ng-href="#!/items/{{pins.uid}}/edit">Go to Pin</a></button>
+
+
+<div class="board-wrapper">
+	<div class="title">
+		<h1 style="text-align: center">Boards</h1>
+	</div>
+	<div class="main-board">
+		<div class="board">
+			<div class="board-title">
+				<h3>{{newBoard.title}}board title</h3>
+			</div>
+			<div class="baord-description">
+				<p>{{newBoard.description}}board description</p>
+			</div>
 		</div>
-</article>
-
-
-
-</section>
-
-</div>
+		<div>
+			<a href="#!/create-board" class="action-button shadow animate red">view board</a>
+		</div>
+	</div>
 </div>

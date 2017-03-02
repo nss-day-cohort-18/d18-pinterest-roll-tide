@@ -36,5 +36,19 @@ app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
         });
     };
 
-    return {getNewPin, saveNewPin};
+    var saveNewBoard = (newBoard) => {
+        return $q((reject, resolve) => {
+            $http.post(`${FBCreds.databaseURL}/boards.json`,
+                JSON.stringify(newBoard))
+            .then((FBObject)=> {
+                console.log(FBCreds.databaseURL);
+                resolve(FBObject);
+            })
+            .catch((error) =>{
+                reject(error);
+            });
+        });
+    };
+
+    return {getNewPin, saveNewPin, saveNewBoard};
 });
