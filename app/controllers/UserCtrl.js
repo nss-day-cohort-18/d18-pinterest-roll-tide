@@ -47,10 +47,17 @@ app.controller("UserCtrl", function($scope, $window, $location, AuthFactory){
     	AuthFactory
 	    .loginUser($scope.account)
 	    .then( () => {
-	        // $scope.isLoggedIn = true;
-	        // console.log("UserCtrl: user is loggedIn", $scope.isLoggedIn );
-	        // $scope.$apply();
-	        $window.location.href = "#!/home";
+
+	    	// This determines what page will load based on
+	    	// if correct email & password are entered
+	    	if ($scope.isLoggedIn === true){
+	    		console.log("UserCtrl: user is loggedIn", $scope.isLoggedIn );
+	    		$scope.$apply();
+	    		$window.location.href = "#!/home";
+	    	}else{
+	    		$window.location.href = "#!/login";
+	    	}	
+	    
 	    });
 	};
 

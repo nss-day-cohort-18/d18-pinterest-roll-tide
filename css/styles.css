@@ -1,11 +1,21 @@
 
-/* Navbar */
+/*********************
+- Navbar
+**********************/
 
 .navbar{
   background-color: white;
 }
 
-/*.navbar-form {
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: red;
+}
+
+.navbar-header > .navbar-brand > a:hover, .navbar-header > .navbar-brand > a:focus {
+  color: red;
+}
+
+.navbar-form {
 
 	width: 73% !important;
 }
@@ -25,13 +35,19 @@
   box-shadow: none;
 }
 
+/*********************
+- Splash Page
+**********************/
+
+
+
 
 
 
 
 /***********************
 - Pinterest Cards
-***********************/
+**********************/
 
 #pinBoot {
   position: relative;
@@ -79,3 +95,4 @@ h2 {
   float: right;
   margin-right: 1%;
 }
+

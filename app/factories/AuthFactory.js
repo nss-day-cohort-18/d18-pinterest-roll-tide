@@ -1,6 +1,6 @@
 "use strict";
 
-app.factory("AuthFactory", function(){
+app.factory("AuthFactory", function($window){
 
 	// currentUser, createUser, loginUser, logoutUser, isAuthenticated getUser
 
