@@ -8,17 +8,18 @@ app.controller("NewPinCtrl", function($scope, PinFactory, $location, AuthFactory
 	$scope.btnText = "Cancel";
 	$scope.newText = {};
 
-	$scope.newTask = {
+	$scope.newPin = {
 		uid: "",
 		boardid: "",
 		url: "",
-		title: ""
+		title: "",
+		description: ""
 	};
 
 	$scope.addNewPin = function(){
-		PinFactory.saveNewPin($scope.newTask)	//ask Dean about his saveNewPin ***and what is newTask
+		PinFactory.saveNewPin($scope.newPin)	//ask Dean about his saveNewPin ***and what is newTask
 		.then(function(response){
-			$location.url("");
+			$location.url("/create-pin");
 		});
 
 		$scope.newTask = {};
