@@ -7,6 +7,9 @@
 		<h1 style="text-align: center">Boards</h1>
 	</div>
 	<div class="main-board">
+		<div class="create-board">
+			<a href="#!/create-board" class="action-button shadow animate red">Create new board</a>
+		</div>
 		<div class="board">
 			<div class="board-title">
 				<h3>{{newBoard.title}}board title</h3>
@@ -16,7 +19,7 @@
 			</div>
 		</div>
 		<div>
-			<a href="#!/create-board" class="action-button shadow animate red">view board</a>
+			<a href="#!/board/{{board.title}}" class="action-button shadow animate red">view board</a>
 		</div>
 	</div>
 </div>
