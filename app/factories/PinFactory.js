@@ -1,7 +1,7 @@
 "use strict";
 
 app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
-    
+
     var user = AuthFactory.getUser();
 
     var getNewPin = () => {
@@ -49,6 +49,51 @@ app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
             });
         });
     };
+/*********************************
+-Get USER BOARD LIST
+*********************************/
 
-    return {getNewPin, saveNewPin, saveNewBoard};
+    let getBoardList = (user) => {
+  let boards = [];
+  return $q((resolve, reject) => {
+    $http.get(`${FBCreds.databaseURL}/items.json?orderBy="uid"&equalTo="${user}"`)
+    .then((itemObject) => {
+      let boardCollection = itemObject.data;
+      Object.keys(boardCollection).forEach((key) => {
+        boardCollection[key].id = key;
+        items.push(boardCollection[key]);
+      });
+      resolve(boards);
+      console.log("items", boards);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+  });
+};
+
+/*********************************
+-Get USER BOARD LIST
+*********************************/
+    let getPinList = (user) => {
+  let pins = [];
+  return $q((resolve, reject) => {
+    $http.get(`${FBCreds.databaseURL}/items.json?orderBy="uid"&equalTo="${user}"`)
+    .then((itemObject) => {
+      let pinCollection = itemObject.data;
+      Object.keys(pinCollection).forEach((key) => {
+        pinCollection[key].id = key;
+        items.push(pinCollection[key]);
+      });
+      resolve(pins);
+      console.log("items", pins);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+  });
+};
+
+
+    return {getNewPin, saveNewPin, saveNewBoard, getItemList, getBoardList};
 });
