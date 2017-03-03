@@ -1,9 +1,22 @@
-<div class="pin-wrapper">
+<!-- <div class="pin-wrapper">
 	<div class="title">
-		<h1>{{pin.title}}Pin Title</h1>
+		<h1>{{pins.title}}Pin Title</h1>
 		<figure>
-			<img src="{{pin.url}}"" alt="Pin Board">
+
+			<img src="{{pin.url}}" alt="Pin Board">
 			<figcaption>{{pin.description}}Pin Description</figcaption>
 		</figure>
 	</div>
-</div>
+</div> -->
+
+
+<figure ng-click="">
+ 	<div ng-repeat="pin in pins | filter: searchText.search">
+ 		<a href="#!/boards" ng-click="" class="action-button shadow animate red">Save Pin</a>
+ 		<img src="{{pin.url}}">
+ 	<figcaption>{pin.title}</figcaption>
+ 	<figcaption>{pin.Description}</figcaption>
+</figure>
+
+			<img src="{{pins.url}}"" alt="Pin Board">
+

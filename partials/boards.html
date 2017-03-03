@@ -1,4 +1,4 @@
-<div class="board-wrapper" ng-repeat="board in boards">
+
 	<div class="title">
 		<h1 style="text-align: center">Boards</h1>
 	</div>
@@ -10,7 +10,7 @@
 			<div class="board-title">
 				<h3>{{board.title}}board title</h3>
 			</div>
-			<div class="baord-description">
+			<div class="board-description"> <!-- Spelled Wrong !-->
 				<p>{{board.description}}board description</p>
 			</div>
 		</div>
@@ -19,3 +19,26 @@
 		</div>
 	</div>
 </div>
+
+<div class="board-wrapper" ng-repeat="board in boards | filter: searchText.search">
+    <div class="title">
+        <h1 style="text-align: center">Boards</h1>
+    </div>
+    <div class="main-board">
+        <div class="create-board">
+            <a href="#!/create-board" class="action-button shadow animate red">Create new board</a>
+        </div>
+        <div class="board">
+            <div class="board-title">
+                <h3>{{board.title}}board title</h3>
+            </div>
+            <div class="baord-description">
+                <p>{{board.description}}board description</p>
+            </div>
+        </div>
+        <div>
+            <a href="#!/board/{{board.title}}" class="action-button shadow animate red">view board</a>
+        </div>
+    </div>
+</div>
+
