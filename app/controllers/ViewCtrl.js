@@ -1,6 +1,9 @@
 "use strict";
 
 app.controller("ViewCtrl", function($scope, $routeParams, PinFactory, AuthFactory, $window){
+	
+	// let pinId = $routeParams.pinId;
+
 	// $scope.pins = [];
 
 	// let user = AuthFactory.getUser();
