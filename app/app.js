@@ -29,10 +29,6 @@ app.config(function($routeProvider) {
 		templateUrl: "partials/login.html",
 		controller: "UserCtrl"  
 	}).
-	when('/login', {
-		templateUrl: "partials/login.html",
-		controller: "UserCtrl"
-	}).
 	when('/home', {
 		templateUrl: "partials/home.html",
 		controller: "UserCtrl",
