@@ -23,35 +23,43 @@ app.config(function($routeProvider) {
 	// Make a splash page
 	when('/', {
 		templateUrl: "partials/splash.html",
-		controller: "UserCtrl"
+		controller: "UserCtrl",
+        resolve: {isAuth}
 	}).
 	when('/login', {
 		templateUrl: "partials/login.html",
-		controller: "UserCtrl"
+		controller: "UserCtrl",
+        resolve: {isAuth}
 	}).
 	when('/home', {
 		templateUrl: "partials/home.html",
-		controller: "UserCtrl"
+		controller: "UserCtrl",
+        resolve: {isAuth}
 	}).
 	when('/profile', {
 		templateUrl: "partials/profile.html",
-		controller: "UserCtrl"
+		controller: "UserCtrl",
+        resolve: {isAuth}
 	}).
     when('/boards', {
         templateUrl: "partials/boards.html",
-        controller: "BoardCtrl"
+        controller: "BoardCtrl",
+        resolve: {isAuth}
     }).
     when('/boards/{{board.title}}', {
         templateUrl: "partials/",
-        controller: ""
+        controller: "",
+        resolve: {isAuth}
     }).
     when('/create-board', {
         templateUrl: "partials/createboard.html",
-        controller: "NewBoardCtrl"
+        controller: "NewBoardCtrl",
+        resolve: {isAuth}
     }).
     when('/create-pin', {
         templateUrl: "partials/createPin.html",
-        controller: "NewPinCtrl"
+        controller: "NewPinCtrl",
+        resolve: {isAuth}
     });
 });
 

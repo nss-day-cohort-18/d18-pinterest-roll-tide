@@ -1,8 +1,4 @@
-
-
-
-
-<div class="board-wrapper">
+<div class="board-wrapper" ng-repeat="board in boards">
 	<div class="title">
 		<h1 style="text-align: center">Boards</h1>
 	</div>
@@ -12,10 +8,10 @@
 		</div>
 		<div class="board">
 			<div class="board-title">
-				<h3>{{newBoard.title}}board title</h3>
+				<h3>{{board.title}}board title</h3>
 			</div>
 			<div class="baord-description">
-				<p>{{newBoard.description}}board description</p>
+				<p>{{board.description}}board description</p>
 			</div>
 		</div>
 		<div>

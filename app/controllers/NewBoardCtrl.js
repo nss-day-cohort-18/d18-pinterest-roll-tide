@@ -15,6 +15,8 @@ app.controller("NewBoardCtrl", function($scope, PinFactory, $location, AuthFacto
 	};
 
 	$scope.addNewBoard = function(){
+		$scope.newBoard.uid = user;
+		console.log("user: ",  $scope.newBoard);
 		PinFactory.saveNewBoard($scope.newBoard)	//ask Dean about his saveNewPin ***and what is newTask
 		.then(function(response){
 			$location.url("/home");

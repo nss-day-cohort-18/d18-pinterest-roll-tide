@@ -17,6 +17,8 @@ app.controller("NewPinCtrl", function($scope, PinFactory, $location, AuthFactory
 	};
 
 	$scope.addNewPin = function(){
+		$scope.newPin.uid = user;
+		console.log(user);
 		PinFactory.saveNewPin($scope.newPin)	//ask Dean about his saveNewPin ***and what is newTask
 		.then(function(response){
 			$location.url("/create-pin");

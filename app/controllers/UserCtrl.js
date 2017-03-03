@@ -8,6 +8,8 @@ app.controller("UserCtrl", function($scope, $window, $location, AuthFactory){
 		password: ""
 	};
 
+	let currentUser;
+
 	let logout = () => {
 			console.log("logout clicked");
 			AuthFactory.logoutUser()
@@ -69,12 +71,13 @@ app.controller("UserCtrl", function($scope, $window, $location, AuthFactory){
 		AuthFactory.authWithProvider()
 		.then(function(result) {
 			$scope.isLoggedIn = true;
-	        console.log("UserCtrl: user is loggedIn", $scope.isLoggedIn );
-	        $scope.$apply();
-	    	var user = result.user.uid;
-	    	console.log("logged in user:", user);
+	  //       console.log("UserCtrl: user is loggedIn", $scope.isLoggedIn );
+	  //       $scope.$apply();
+	    	currentUser = result.user.uid;
+	    	console.log("logged in user:", currentUser);
 	    	//Once logged in, go to another view
-	    	$location.path("/home");
+	    	// $location.path("/home");
+	    	$window.location.href = "#!/home";
 	    	$scope.$apply();
 	  	}).catch(function(error) {
 	    	// Handle the Errors.
