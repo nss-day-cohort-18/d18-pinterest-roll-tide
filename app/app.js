@@ -61,6 +61,11 @@ app.config(function($routeProvider) {
         controller: "NewPinCtrl",
         resolve: {isAuth}
     });
+    .when('/pins/:uid', {
+      templateUrl: 'partials/pinView.html',
+      controller: 'ViewCtrl',
+      resolve: {isAuth}
+    });
 });
 
 
