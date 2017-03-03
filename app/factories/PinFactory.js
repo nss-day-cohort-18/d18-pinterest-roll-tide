@@ -78,7 +78,7 @@ app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
     let getPinList = (user) => {
   let pins = [];
   return $q((resolve, reject) => {
-    $http.get(`${FBCreds.databaseURL}/items.json?orderBy="uid"&equalTo="${user}"`)
+    $http.get(`${FBCreds.databaseURL}/pins.json?orderBy="uid"&equalTo="${user}"`)
     .then((itemObject) => {
       let pinCollection = itemObject.data;
       Object.keys(pinCollection).forEach((key) => {

@@ -15,5 +15,6 @@ app.controller("NavCtrl", function($scope, $window) {
 		    $scope.isLoggedIn = false;
 		    $window.locationhref = "#!/login";
 		}
+
 	});
 });
