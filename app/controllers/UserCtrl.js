@@ -8,12 +8,13 @@ app.controller("UserCtrl", function($scope, $window, $location, AuthFactory){
 		password: ""
 	};
 
-	let currentUser;
+	var currentUser;
 
-	let logout = () => {
+	$scope.logout = () => {
 			console.log("logout clicked");
 			AuthFactory.logoutUser()
 			.then(function(data){
+				$scope.isLoggedIn = false;
 				console.log("logged out?", data);
 				$window.location.url = "#!/login";
 			}, function(error){
@@ -24,13 +25,11 @@ app.controller("UserCtrl", function($scope, $window, $location, AuthFactory){
 	// Creat user function 
 
 
-/////////////////////////////////////////////////////////////////////
-	//when first loaded, make sure no one is logged in
+
+	// when first loaded, make sure no one is logged in
 	// if(AuthFactory.isAuthenticated()){
 	// 	logout();
 	// }
-/////////////////////////////////////////////////////////////////////
-
 
 	//setup functions to be available to the app for register, login email/password, and google
 	$scope.register = () => {

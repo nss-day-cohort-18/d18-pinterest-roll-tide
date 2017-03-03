@@ -35,6 +35,10 @@
   box-shadow: none;
 }
 
+.logout-button {
+	margin-top: 0.5em;
+}
+
 /*********************
 - Splash Page
 **********************/
@@ -125,6 +129,15 @@ div#columns:hover figure:not(:hover) {
   #columns { column-gap: 0px; }
   #columns figure { width: 100%; }
 }
+
+/******************************
+- Create pins
+********************************/
+
+.createPin-wrapper > form > input {
+	margin-top: 1.5em;
+}
+
 
 /******************************
 -Button
