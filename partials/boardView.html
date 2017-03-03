@@ -1,13 +1,13 @@
 <a href="#!/create-board" class="action-button shadow animate red">Add new board</a>
 
-<div class="board-wrapper">
-	<div class="title">
-		<h1>Board Title</h1>
-	</div>
-	<div class="main-board">
-		<figure>
-			<img src="../data/pictures/10Bama.jpg">
-			<figcaption>Pin description</figcaption>
-		</figure>
-	</div>
+<div id="columns">
+
+  <figure ng-click="">
+   	<div ng-repeat="board in boards | filter: searchText.search">
+   		<a href="#!/boards" ng-click="" class="action-button shadow animate red">Go to Board</a>
+   		<img src="{{board.url}}">
+   	<figcaption>{board.title}</figcaption>
+   	<figcaption>{board.Description}</figcaption>
+  </figure>
+
 </div>

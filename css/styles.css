@@ -91,6 +91,11 @@ div#columns figure {
   column-break-inside: avoid;
 }
 
+div#columns img-circle {
+border-radius: 50%;
+max-width: 100%;
+max-height: 100%;
+}
 div#columns figure img {
 	width: 100%; height: auto;
 	border-bottom: 1px solid #ccc;
@@ -125,7 +130,19 @@ div#columns:hover figure:not(:hover) {
   #columns { column-gap: 0px; }
   #columns figure { width: 100%; }
 }
-
+.circle {
+    display: block;
+    margin: 1em auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    border: 5px solid #eee;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+    float: left;
+}
 /******************************
 -Button
 ********************************/
@@ -141,17 +158,17 @@ div#columns:hover figure:not(:hover) {
 	position: relative;
 	padding: 10px 40px;
   margin: 0px 10px 10px 0px;
-  float: left;
+  float: right;
 	border-radius: 10px;
 	font-family: 'Pacifico', cursive;
-	font-size: 25px;
+	font-size: 12.5px;
 	color: #FFF;
 	text-decoration: none;
 }
 .red
 {
-	background-color: #E74C3C;
-	border-bottom: 5px solid #BD3E31;
+	background-color: #D62448;
+	border: 5px solid #602525;
 	text-shadow: 0px -2px #BD3E31;
 }
 .action-button:active
@@ -159,4 +176,64 @@ div#columns:hover figure:not(:hover) {
 	transform: translate(0px,5px);
   -webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;
+}
+
+/******************************
+-Overlay For add pin
+********************************/
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 30%;
+    width: 30%;
+    position: relative;; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay button  {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay button:hover, .overlay button:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .action-button {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay button {font-size: 20px}
+    .overlay .action-button {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }

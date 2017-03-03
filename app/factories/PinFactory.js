@@ -51,8 +51,6 @@ app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
     };
 
 
-
-
     var getBoards = (userID) => {
         var boards = [];
         console.log("PF userID",  userID);
@@ -72,5 +70,7 @@ app.factory('PinFactory', (AuthFactory, $q, $http, FBCreds) => {
             });
         });
     };
-   return {getNewPin, saveNewPin, saveNewBoard,getBoards};
+
+   return {getNewPin, saveNewPin, saveNewBoard, getPinList, getBoardList, getBoards};
 });
+

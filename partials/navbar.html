@@ -22,9 +22,10 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li ng-show="!isLoggedIn"><a ng-href="#!/login">Log in / Register</a></li>
-        <li ng-show="isLoggedIn"><a ng-href="#!/create-pin" >Add Pin</a></li>
+        <li ng-show="isLoggedIn"><a ng-href="#!/create-pin">Add Pin</a></li>
         <li ng-show="isLoggedIn"><a ng-href="#!/profile">Profile</a></li>
         <li ng-show="isLoggedIn"><a ng-href="#!/login">Logout</a></li>
+        openNav()
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
