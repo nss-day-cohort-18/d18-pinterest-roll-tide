@@ -40,10 +40,17 @@
 }
 
 /*********************
-- Splash Page
+- boards
 **********************/
 
+.main-board {
+  border: 1px black solid;
+}
 
+.board-card {
+  border: 1px black solid;
+  width: 50%;
+}
 /*********************
 - Input Partial
 **********************/
@@ -61,6 +68,15 @@
   float: right;
   margin-right: 1%;
 }
+
+/**********************
+- board button pin page
+***********************/
+
+.board-button {
+  display: inline;
+}
+
 
 
 /**********************
