@@ -16,7 +16,7 @@ app.controller("UserCtrl", function($scope, $window, $location, AuthFactory){
 			.then(function(data){
 				$scope.isLoggedIn = false;
 				console.log("logged out?", data);
-				$window.location.url = "#!/login";
+				$window.location.href = "#!/login";
 				console.log("You should be on the login page!");
 			}, function(error){
 				console.log("error occured on logout");
@@ -78,7 +78,8 @@ app.controller("UserCtrl", function($scope, $window, $location, AuthFactory){
 	    	//Once logged in, go to another view
 	    	// $location.path("/home");
 	    	$window.location.href = "#!/home";
-	    	$scope.$apply();
+	    	// $scope.$apply();
+	    	$window.location.reload(false);
 	  	}).catch(function(error) {
 	    	// Handle the Errors.
 	    	console.log("error with google login", error);
