@@ -35,6 +35,10 @@
   box-shadow: none;
 }
 
+.logout-button {
+	margin-top: 0.5em;
+}
+
 /*********************
 - Splash Page
 **********************/
@@ -143,6 +147,15 @@ div#columns:hover figure:not(:hover) {
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
     float: left;
 }
+/******************************
+- Create pins
+********************************/
+
+.createPin-wrapper > form > input {
+	margin-top: 1.5em;
+}
+
+
 /******************************
 -Button
 ********************************/

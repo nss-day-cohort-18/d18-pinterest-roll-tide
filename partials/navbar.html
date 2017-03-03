@@ -20,12 +20,11 @@
           <input type="text" class="form-control" placeholder="Search" ng-model="searchText.search">
         </div>
       </form>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" ng-controller="UserCtrl">
         <li ng-show="!isLoggedIn"><a ng-href="#!/login">Log in / Register</a></li>
         <li ng-show="isLoggedIn"><a ng-href="#!/create-pin">Add Pin</a></li>
         <li ng-show="isLoggedIn"><a ng-href="#!/profile">Profile</a></li>
-        <li ng-show="isLoggedIn"><a ng-href="#!/login">Logout</a></li>
-        openNav()
+        <li ng-show="isLoggedIn"><button class="btn btn-default logout-button" ng-click="logout()">Logout</button></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

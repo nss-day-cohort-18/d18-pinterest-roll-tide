@@ -4,33 +4,33 @@ app.factory("AuthFactory", function($window){
 
 	// currentUser, createUser, loginUser, logoutUser, isAuthenticated getUser
 
-	let currentUser = null;
+	var currentUser = null;
 
-	let createUser = function(userObj){
+	var createUser = function(userObj){
 		return firebase.auth().createUserWithEmailAndPassword(userObj.email, userObj.password)
 		.catch( function(error){
-			let errorCode = error.code;
-			let errorMessage = error.message;
+			var errorCode = error.code;
+			var errorMessage = error.message;
 			console.log("error:", errorCode, errorMessage);
 		});
 	};
 
-	let loginUser = function(userObj) {
+	var loginUser = function(userObj) {
 		return firebase.auth().signInWithEmailAndPassword(userObj.email, userObj.password)
 		.catch( function(error){
-			let errorCode = error.code;
-			let errorMessage = error.message;
+			var errorCode = error.code;
+			var errorMessage = error.message;
 			console.log("error:", errorCode, errorMessage);
 		});
 	};
 
-	let logoutUser = function(){
+	var logoutUser = function(){
 		console.log("logoutUser");
 		return firebase.auth().signOut();
 	};
 
 
-	let isAuthenticated = function (){
+	var isAuthenticated = function (){
 		console.log("AuthFactory: isAuthenticated");
 		return new Promise ( (resolve, reject) => {
 			firebase.auth().onAuthStateChanged( (user) => {
@@ -45,14 +45,14 @@ app.factory("AuthFactory", function($window){
 		});
 	};
 
-	let getUser = function(){
+	var getUser = function(){
 		return currentUser;
 	};
 
 
-	let provider = new firebase.auth.GoogleAuthProvider();
+	var provider = new firebase.auth.GoogleAuthProvider();
 
-	let authWithProvider= function(){
+	var authWithProvider= function(){
     	return firebase.auth().signInWithPopup(provider);
   	};
 

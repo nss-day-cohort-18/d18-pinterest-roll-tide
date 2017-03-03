@@ -23,13 +23,13 @@ app.config(function($routeProvider) {
 	// Make a splash page
 	when('/', {
 		templateUrl: "partials/splash.html",
-		controller: "UserCtrl",
-        resolve: {isAuth}
+		controller: "UserCtrl"
+        
 	}).
 	when('/login', {
 		templateUrl: "partials/login.html",
-		controller: "UserCtrl",
-        resolve: {isAuth}
+		controller: "UserCtrl"
+        
 	}).
 	when('/home', {
 		templateUrl: "partials/home.html",

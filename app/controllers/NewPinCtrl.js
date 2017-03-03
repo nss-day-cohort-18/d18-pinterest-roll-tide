@@ -8,6 +8,8 @@ app.controller("NewPinCtrl", function($scope, PinFactory, $location, AuthFactory
 	$scope.btnText = "Cancel";
 	$scope.newText = {};
 
+	$scope.boards = [];
+
 	$scope.newPin = {
 		uid: "",
 		boardid: "",
@@ -15,6 +17,17 @@ app.controller("NewPinCtrl", function($scope, PinFactory, $location, AuthFactory
 		title: "",
 		description: ""
 	};
+
+	$scope.addBoardIDToPin = function(board) {
+		$scope.newPin.boardid = board.id;
+		console.log("NewPinCtrl addboard: ", $scope.newPin.boardid);
+	};
+
+
+	PinFactory.getBoards(user)
+	.then( function(boardCollection){
+		$scope.boards = boardCollection;
+	});
 
 	$scope.addNewPin = function(){
 		$scope.newPin.uid = user;
