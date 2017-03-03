@@ -23,13 +23,11 @@ app.config(function($routeProvider) {
 	// Make a splash page
 	when('/', {
 		templateUrl: "partials/splash.html",
-		controller: "UserCtrl"
-        
+		controller: "UserCtrl"    
 	}).
 	when('/login', {
 		templateUrl: "partials/login.html",
-		controller: "UserCtrl"
-        
+		controller: "UserCtrl"  
 	}).
 	when('/home', {
 		templateUrl: "partials/home.html",
@@ -42,7 +40,7 @@ app.config(function($routeProvider) {
         resolve: {isAuth}
 	}).
     when('/boards', {
-        templateUrl: "partials/boards.html",
+        templateUrl: "partials/boardView.html",
         controller: "BoardCtrl",
         resolve: {isAuth}
     }).
@@ -60,8 +58,8 @@ app.config(function($routeProvider) {
         templateUrl: "partials/createPin.html",
         controller: "NewPinCtrl",
         resolve: {isAuth}
-    });
-    .when('/pins/:uid', {
+    }).
+    when('/pins/:uid', {
       templateUrl: 'partials/pinView.html',
       controller: 'ViewCtrl',
       resolve: {isAuth}

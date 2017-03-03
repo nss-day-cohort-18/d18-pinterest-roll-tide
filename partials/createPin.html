@@ -1,9 +1,11 @@
-<!-- <div class="createPin-wrapper">
+ <!-- Regular view  -->
+
+ <div class="createPin-wrapper">
 	<form>
 	  <div class="form-group">
-	    <label>Create Pin: </label> -->
+	    <label>Create Pin: </label>
 	    <!-- TODO: Hook up this form to our JS for submitting -->
-	    <!-- <input type="text" class="form-control" placeholder="Pin Title" ng-model="newPin.title"/>
+	    <input type="text" class="form-control" placeholder="Pin Title" ng-model="newPin.title"/>
 	    <input type="text" class="form-control" placeholder="URL" ng-model="newPin.url"/>
 	    <input type="text" class="form-control" placeholder="Pin Description" ng-model="newPin.description"/>
 
@@ -11,32 +13,32 @@
 	</form>
 	<div class="select-board">
 		<h1>Select Board: </h1>
-		<div ng-repeat="board in boards">
-			<button class="btn btn-primary" ng-click="addBoardIDToPin(board)">{{board.title}}</button>
+		<div class="board-button" ng-repeat="board in boards">
+			<button class="btn btn-primary " ng-click="addBoardIDToPin(board)">{{board.title}}</button>
 		</div>
 	</div>
 	<!-- TODO: bind this button to a function -->
-<!-- 	<a href="#!/create-pin" class="action-button shadow animate red" ng-click="addNewPin()">Create Pin</a>
+	<a href="#!/create-pin" class="action-button shadow animate red" ng-click="addNewPin()">Create Pin</a>
 </div>
 
-	  </div> -->
-	  <!-- TODO: bind this button to a function -->
-	  <!-- <a href="#!/create-pin" class="action-button shadow animate red" ng-click="addNewPin()">Create Pin</a> -->
-	<!-- </form>
-</div> -->
+
+
+<!-- Overlay -->
+<!-- 
 
 <div id="myNav" class="overlay">
 	<div class="createPin-wrapper">
 		<form>
 		  <div class="overlay-content">
 		    <label>Create Pin: </label>
-		    <!-- TODO: Hook up this form to our JS for submitting -->
+		    TODO: Hook up this form to our JS for submitting
 		    <input type="text" class="form-control" placeholder="Pin Title" ng-model="newPin.title"/>
 		    <input type="text" class="form-control" placeholder="URL" ng-model="newPin.url"/>
 		    <input type="text" class="form-control" placeholder="Pin Description" ng-model="newPin.description"/>
 		  </div>
-		  <!-- TODO: bind this button to a function -->
+		   TODO: bind this button to a function
 		  <button class="action-button shadow animate red" ng-click="addNewPin()">Create Pin</button>
 		</form>
 	</div>
 </div>
+ -->

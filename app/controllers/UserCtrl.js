@@ -17,6 +17,7 @@ app.controller("UserCtrl", function($scope, $window, $location, AuthFactory){
 				$scope.isLoggedIn = false;
 				console.log("logged out?", data);
 				$window.location.url = "#!/login";
+				console.log("You should be on the login page!");
 			}, function(error){
 				console.log("error occured on logout");
 			});
